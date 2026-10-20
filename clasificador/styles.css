@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;
+    color: #222;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.tarjeta {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+button {
+    font-size: 16px;
+    padding: 8px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3366cc;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover:enabled {
+    background-color: #254a99;
+}
+
+button:disabled {
+    background-color: #b5bcc9;
+    cursor: not-allowed;
+}
+
+#subida,
+#umbral {
+    margin: 15px 0;
+}
+
+#subida label,
+#umbral label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#rangoUmbral {
+    width: 80%;
+}
+
+#contenedor-webcam {
+    display: flex;
+    justify-content: center;
+}
+
+canvas,
+#imagenSubida {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#imagenSubida {
+    max-height: 300px;
+}
+
+#mensaje {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px 0 10px 0;
+}
+
+.coincidencia {
+    color: #1a8a3a;
+}
+
+.sin-coincidencia {
+    color: #c0392b;
+}
+
+#resultado div {
+    margin: 5px;
+    font-size: 18px;
+}
+
+#historico {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    text-align: left;
+}
+
+#historico li {
+    padding: 6px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* pantallas pequeñas (móvil) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #rangoUmbral {
+        width: 100%;
+    }
+}

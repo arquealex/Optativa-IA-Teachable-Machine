@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificador de imágenes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Clasificador de imágenes</h1>
+
+    <main>
+        <section class="tarjeta">
+            <h2>Clasificador</h2>
+
+            <div id="botones">
+                <button id="btnIniciar" disabled>Iniciar</button>
+                <button id="btnParar" disabled>Parar</button>
+            </div>
+
+            <div id="subida">
+                <label for="inputImagen">O sube una imagen para clasificarla:</label>
+                <input type="file" id="inputImagen" accept="image/*" disabled>
+            </div>
+
+            <div id="umbral">
+                <label for="rangoUmbral">
+                    Valor mínimo de coincidencia: <span id="valorUmbral">90</span>%
+                </label>
+                <input type="range" id="rangoUmbral" min="50" max="100" value="90">
+            </div>
+
+            <div id="contenedor-webcam"></div>
+            <img id="imagenSubida" alt="Imagen subida" hidden>
+
+            <p id="mensaje"></p>
+            <div id="resultado"></div>
+        </section>
+
+        <section class="tarjeta">
+            <h2>Histórico</h2>
+            <button id="btnBorrar">Borrar histórico</button>
+            <ul id="historico"></ul>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
